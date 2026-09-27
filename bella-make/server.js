@@ -128,4 +128,4 @@ const server = http.createServer(async (req, res) => {
     res.end(req.method==='HEAD'?undefined:bytes);
   } catch(e) { if(!e.status) console.error(e); send(e.status || 500,{error:e.status?e.message:'Não foi possível concluir. Tente novamente.'}); }
 });
-server.listen(Number(process.env.PORT || 3000),'127.0.0.1',()=>console.log(`Bella Make: http://localhost:${process.env.PORT || 3000}`));
+server.listen(Number(process.env.PORT || 3000),'0.0.0.0',()=>console.log(`Bella Make: http://localhost:${process.env.PORT || 3000}`));

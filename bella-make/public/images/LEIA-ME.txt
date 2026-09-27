@@ -1,0 +1,6 @@
+Coloque aqui suas fotos, por exemplo gloss.jpg, base.jpg e banner.jpg.
+Em catalog.json, altere o campo image para /images/gloss.jpg.
+Reinicie o servidor após editar catalog.json.
+Para o banner, personalize a regra .hero no fim de public/styles.css:
+.hero { background-image: linear-gradient(90deg, #211521bb, #21152122), url('/images/banner.jpg'); }
+Para a seção de skincare, personalize .ritual-blank com background-image e background-size: cover.

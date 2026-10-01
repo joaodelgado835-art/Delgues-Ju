@@ -99,7 +99,7 @@ export function createApp({dataDir=join(root,'data'),adminToken,now=()=>Date.now
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
  const app=createApp({adminToken:process.env.ADMIN_TOKEN,dataDir:process.env.DATA_DIR||join(root,'data')});
- const port=Number(process.env.PORT||3000),host=process.env.HOST||'127.0.0.1';
+ const port=Number(process.env.PORT||3000),host=process.env.HOST||'0.0.0.0';
  app.server.listen(port,host,()=>console.log(`Julia Amorim: http://${host}:${port}\nPainel: http://${host}:${port}/admin\nChave local: data/admin-token.txt`));
 }
 
